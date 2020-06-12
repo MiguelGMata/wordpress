@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flex Panels 💪</title>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <header>
+ 
+  <div class="panels1">
+    <div class="panel panel-A-1">
+      <p >Hey</p>
+      <p id="p">Let's</p>
+      <p>Dance</p>
+    </div>
+    <div class="panel panel-A-2">
+      <p>Give</p>
+      <p>Take</p>
+      <p>Receive</p>
+    </div>
+    <div class="panel panel-A-3">
+      <p>Experience</p>
+      <p>It</p>
+      <p>Today</p>
+    </div>
+    <div class="panel panel-A-4">
+      <p>Give</p>
+      <p>All</p>
+      <p>You can</p>
+    </div>
+    <div class="panel panel-A-5">
+      <p>Life</p>
+      <p>In</p>
+      <p>Motion</p>
+    </div>
+  </div>
+  <input class="bouton" type="button" value="&#60" onclick="avant()">
+  <input class="bouton" type="button" value="&#62" onclick="derriere()">
+</header>
+<script>
+
+  let num=1;
+  function avant() {
+      num++;
+      if(num>2)
+          num=1;
+      let panels=document.querySelector(".panels1");
+      console.log(panels);
+      panels.className= 'panels'+num;
+        
+      for (let i = 1; i <= 5; i++) {
+      let panel = document.querySelector(".panel-A-"+i);
+      panel.classList.add("panel", "panel-B-"+i);
+      panel.classList.remove("panel-A-"+i);
+    } 
+      
+
+  }
+
+
+  
+  function derriere() {
+    num--;
+    if (num<1)
+        num=2;
+    let panels=document.querySelector(".panels1");
+    console.log(panels);
+    panels.className= 'panels'+num;
+      
+    for (let i = 1; i <= 5; i++) {
+    let panel = document.querySelector(".panel-A-"+i);
+    panel.classList.add("panel", "panel-B-"+i);
+    panel.classList.remove("panel-A-"+i);
+    } 
+          
+  }
+</script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes</title>
+</head>
+<body>
+<style>
+    img{
+        margin: 10% 30%;
+        
+    }
+    img:hover {
+        cursor: pointer; /*para el cursor con la manito*/
+        transform: scale(1.2,1.2);
+        /*transform:translatey(20%);*/
+        transition: all 0.5s;
+    }
+    .bouton{
+        font-size: 20px;
+        width: 30px;
+        height: 50px;
+        color: rgb(190, 64, 25);
+        border-radius: 90%;
+        transition: all 0.5s;
+    }
+
+    .bouton:hover {
+        cursor: pointer;
+        transform: scale(1.2,1.2);
+    }
+</style>
+
+    <form action="f1">
+        <input class="bouton" type="button" value="&#60" onclick="avant()">
+        <img class="photo" src="sandro1.png" width="500" heigth="100" alt="">
+        <input class="bouton" type="button" value="&#62" onclick="derriere()">
+    </form>
+    
+
+    <script>
+
+        let num=1;
+        function avant() {
+            num++;
+            if(num>3)
+                num=1;
+            let photo=document.querySelector(".photo");
+            photo.src="sandro"+num+".png";
+            document.querySelector(".photo").style.opacity = "1"
+        }
+        function derriere() {
+            num--;
+            if (num<1)
+                num=3;
+            let photo=document.querySelector(".photo");
+            photo.src="sandro"+num+".png";
+            document.querySelector(".photo").style.opacity = "1"
+        }
+                
+     
+    </script>
+</body>
+</html>

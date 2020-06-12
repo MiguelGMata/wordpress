@@ -1,0 +1,54 @@
+/*
+Theme Name: Twenty Seventeen Child
+Theme URI: http://misitio.com/twenty-seventeen-child
+Description: Child theme pour modifications
+Author: Miguel G Mata
+Template: twentyseventeen
+Version: 1.0.0
+License: GNU General Public License v2 or later
+Licence URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, dark, two-colums, rigth-sidebar, responsive-layout
+Text Domain: twenty-seventeen-child
+*/
+
+#wp-custom-header{
+    background-color: green;
+}
+.wp-custom-header1{
+    background-color: violet;
+}
+
+.site-branding1 {
+    background-color: blue;
+}
+
+.wrap1{
+    background-color: yellow;
+}
+
+.site-branding-text1 {
+    background-color: black;
+}
+
+.site-content-contain1 {
+    background-color: royalblue;
+}
+
+
+
+.seventeen-front-page .site-branding, .has-header-video.twentyseventeen-front-page .site-branding, .has-header-image.home.blog .site-branding, .has-header-video.home.blog .site-branding {
+
+    width: 100%;
+    height:  25%;
+}
+
+.site-branding  {
+    background-color: #4DC0F1;
+    background-image: url(./assets/images/1.jpg);
+    height: 100%;
+    
+}
+
+body, button, input, select, textarea {
+    background-color: #121D53 
+    }
